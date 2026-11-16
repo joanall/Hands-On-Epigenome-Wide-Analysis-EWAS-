@@ -1,4 +1,4 @@
-# **Hands-On-Epigenome-Wide-Analysis-EWASl** 
+# **Hands-On-Epigenome-Wide-Analysis-EWAS** 
 
 **Joana Llauradó**, Predoctoral Researcher at the Barcelona Institute for Global Health (ISGlobal).  
 **Mariona Bustamante**,  Senior Research Scientist at the Barcelona Institute for Global Health (ISGlobal).  
@@ -9,8 +9,9 @@ This hands-on exercise focuses on the analysis phase of an Epigenome-Wide Associ
 Using preprocessed DNA methylation data, participants will learn how to identify associations between 
 an environmental exposure—such as smoking—and methylation levels across the genome.
 
-The data quality control (QC) step will not be assessed in this session. However, participants 
-can explore QC independently using the example code provided [here: insert link], which demonstrates h
+The data quality control (QC) step will not be assessed in this session. It usually take, winsotization batch effect etc etc
+However, participants 
+can explore QC independently using the example code provided https://github.com/epicenteredresearch/PACEanalysis/tree/main, which demonstrates h
 ow to perform standard preprocessing and QC steps.
 
 During this practical, we will perform EWAS analysis and basic downstream interpretation to gain 
