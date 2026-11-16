@@ -9,36 +9,57 @@ This hands-on exercise focuses on the analysis phase of an Epigenome-Wide Associ
 Using preprocessed DNA methylation data, participants will learn how to identify associations between 
 an environmental exposure—such as smoking—and methylation levels across the genome.
 
-The data quality control (QC) step will not be assessed in this session. It usually take, winsotization batch effect etc etc
-However, participants 
-can explore QC independently using the example code provided https://github.com/epicenteredresearch/PACEanalysis/tree/main, which demonstrates h
-ow to perform standard preprocessing and QC steps.
+The data quality control (QC) step will not be covered in this session (it usually includes sample and probe
+filtering, normalisation, winsorisation, batch-effect checks, etc.). However, participants can explore QC
+independently using the example code provided in https://github.com/epicenteredresearch/PACEanalysis/tree/main
+and https://github.com/isglobal-brge/course_methylation, which demonstrate how to perform standard
+preprocessing and QC steps.
 
 During this practical, we will perform EWAS analysis and basic downstream interpretation to gain 
 biological insight from the results. Participants will learn how to run association models, 
 correct for multiple testing, visualize significant findings (e.g., using Manhattan and QQ plots), 
 and interpret the top CpG sites and enriched pathways related to the exposure of interest.
 
-**Considerations**: Public data from [link] It must be noted that this data is public and has been
-revied/selcetd to be able tor un this nalaysis in a short period of time. 
-Ewas data usually is upt to XXXX GB and a compute with enough memory or clsuter is nneded
-to run this nalaysis. Also the time needed is higher than the one for this Hands-on. 
+**Data**: Public data from the GEO study [GSE42861](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE42861)
+(Liu et al., *Nat Biotechnol* 2013, PMID: [23334450](https://pubmed.ncbi.nlm.nih.gov/23334450/)): a rheumatoid
+arthritis case–control study with blood DNA methylation measured with the Illumina 450K array. In this tutorial we use
+**smoking** (current vs never) as the exposure. We use a pre-processed subset (cohort 1, 294 participants) prepared
+for a previous ISGlobal course, with a reduced number of CpGs.
+
+**Considerations**: This data is public and has been reduced/selected so that the analysis can be run in a short
+period of time. Real EWAS data are much larger (raw IDAT files take roughly 10–20 MB per sample on the 450K array,
+i.e. several to tens of GB for a full study), and a computer with enough memory or a computing cluster is needed to
+run the analysis. The time needed is also much longer than the time available in this hands-on session.
+
+**Main R packages**: [`meffil`](https://github.com/perishky/meffil) (pre-processing and EWAS of Illumina methylation
+arrays), `Biobase` (ExpressionSet objects), `tableone` (descriptives), `qqman` and `ggplot2` (QQ, Manhattan and
+volcano plots), `IlluminaHumanMethylation450kanno.ilmn12.hg19` (CpG annotation), and `clusterProfiler`, `ReactomePA`
+and `org.Hs.eg.db` (GO, KEGG and Reactome enrichment). See Section 1 of the notebook for details.
+
+**Contents**: data loading and descriptives, EWAS with robust linear regression, genomic inflation (λ),
+significance thresholds (FDR, suggestive, Bonferroni, permutation-based), volcano and Manhattan plots, CpG annotation,
+enrichment analyses (GO, Reactome, KEGG), online tools (eFORGE, Enrichr, EWAS Catalog) and an introduction to
+epigenetic clocks.
+
+**Based on/adapted from**: Summer School in Global Health 2023 – EWAS course,
+https://github.com/isglobal-brge/course_methylation, where you can find more material.
 
 # Repository Guide 
 
 The repository contains the following documents: 
 
-* **ewas_tutorial.ipynb:** Notebok for the practial ttotrial with the code needed to perfom EWAS
-* **data:** Folder with the data that will be sued during the session. 
+* **ewas_tutorial.ipynb:** Notebook for the practical tutorial with the code needed to perform the EWAS.
+* **data:** Folder with the data that will be used during the session (methylation data and 450K annotation).
+* **results:** Pre-computed results and plots, in case any step cannot be run during the session.
 
 # **Reminder: Introduction to NoteBook**
 
-This tutorial **[ewas_tutoial.ipnyb](https://github.com/joanall/Hands-On-Epigenome-Wide-Analysis-EWAS-/blob/main/ewas_tutorial.ipynb)**
+This tutorial **[ewas_tutorial.ipynb](https://github.com/joanall/Hands-On-Epigenome-Wide-Analysis-EWAS-/blob/main/ewas_tutorial.ipynb)**
 file is a Notebook object. you will be guided step by step from loading a dataset to performing analysis.
 
 **To access the tutorial:**
 
-- **Open** the exposome_tutorial.ipynb file.
+- **Open** the ewas_tutorial.ipynb file.
 
 - **Click** the “Open in Colab” button at the top of the notebook.
 
