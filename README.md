@@ -50,6 +50,7 @@ The repository contains the following documents:
 * **ewas_tutorial.ipynb:** Notebook for the practical tutorial with the code needed to perform the EWAS.
 * **data:** Folder with the data that will be used during the session (methylation data and 450K annotation).
 * **results:** Pre-computed results and plots, in case any step cannot be run during the session.
+* **setup:** `build_colab_library.ipynb`, for instructors: installs all the packages once in Colab and saves a copy of the R library, which the tutorial downloads (published as a GitHub release, tag `colab-lib`).
 
 # **Reminder: Introduction to NoteBook**
 
