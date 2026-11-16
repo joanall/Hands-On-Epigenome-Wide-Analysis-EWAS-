@@ -5,12 +5,12 @@
 
 
 **Description:** 
-This hands-on exercise focuses on the analysis phase of an Epigenome-Wide Association Study (EWAS). 
+This hands-on exercise is to perfrom an Epigenome-Wide Association Study (EWAS). 
 Using preprocessed DNA methylation data, participants will learn how to identify associations between 
-an environmental exposure—such as smoking—and methylation levels across the genome.
+an environmental exposure — such as smoking — and methylation levels across the genome.
 
 The data quality control (QC) step will not be covered in this session (it usually includes sample and probe
-filtering, normalisation, winsorisation, batch-effect checks, etc.). However, participants can explore QC
+filtering, normalisation, winsorisation, batch-effect checks, etc.). Participants can explore QC
 independently using the example code provided in https://github.com/epicenteredresearch/PACEanalysis/tree/main
 and https://github.com/isglobal-brge/course_methylation, which demonstrate how to perform standard
 preprocessing and QC steps.
@@ -23,8 +23,7 @@ and interpret the top CpG sites and enriched pathways related to the exposure of
 **Data**: Public data from the GEO study [GSE42861](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE42861)
 (Liu et al., *Nat Biotechnol* 2013, PMID: [23334450](https://pubmed.ncbi.nlm.nih.gov/23334450/)): a rheumatoid
 arthritis case–control study with blood DNA methylation measured with the Illumina 450K array. In this tutorial we use
-**smoking** (current vs never) as the exposure. We use a pre-processed subset (cohort 1, 294 participants) prepared
-for a previous ISGlobal course, with a reduced number of CpGs.
+**smoking** (current vs never) as the exposure. We use a pre-processed subset (cohort 1, 294 participants) with a reduced number of CpGs.
 
 **Considerations**: This data is public and has been reduced/selected so that the analysis can be run in a short
 period of time. Real EWAS data are much larger (raw IDAT files take roughly 10–20 MB per sample on the 450K array,
